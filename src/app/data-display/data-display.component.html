@@ -1,0 +1,35 @@
+<h2>Welcome to Gen App</h2>
+<p>Data Table to display the data</p>
+<div class="col-sm-12">
+  <p-table [columns]="columns" [value]="data">
+    <ng-template pTemplate="caption">
+        Data List
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                {{col.label}}
+                <input pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)" [attr.placeholder]="col.filterPlaceHolder">
+                <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="footer" let-columns>
+        <tr>
+            <td *ngFor="let col of columns">
+                {{col.header}}
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        There are {{data?.length}} Records
+    </ng-template>
+</p-table>
+</div>

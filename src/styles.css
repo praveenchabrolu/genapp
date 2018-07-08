@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+.main {
+  margin-top: 50px;
+}
+
+.layout-nav-side {
+    display: flex;
+}
+
+.layout-nav-side > .navbar {
+    padding: 1.5rem;
+    width: 264px;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.layout-nav-side .main-container {
+    overflow: hidden;
+    flex: 1;
+    max-width: calc(100vw - 264px);
+}
+
+.layout-nav-side > .navbar .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-link[data-toggle="collapse"] {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-link[data-toggle="collapse"]:hover:after {
+    opacity: .9;
+}
+
+.nav-link[data-toggle="collapse"][aria-expanded="false"]:after {
+    transform: rotate(-90deg);
+}
+
+.nav-link[data-toggle="collapse"][aria-expanded="true"]:after {
+    transform: rotate(0deg);
+    opacity: .9;
+}
+
+.nav-link[data-toggle="collapse"]:after {
+    transition: transform .35s ease, opacity .35s ease;
+    opacity: .5;
+}
+
+.nav-link[data-toggle="collapse"]:hover:after {
+    opacity: .9;
+}
+
+.nav-link[data-toggle="collapse"]::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.content-header {
+  height: 35px;
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "id": 123,
+    "model": "vin",
+    "label": "Vin",
+    "details": {
+      "type": "input",
+      "placeholder" : "Vin",
+      "required": true
+    },
+    "value": "",
+    "Order": 1
+  },
+  {
+    "id": 124,
+    "model": "year",
+    "label": "Year",
+    "details": {
+      "type": "select",
+      "placeholder" : "Select",
+      "required": true,
+      "options": [
+        {"id":"2013", "label":"2013"},
+        {"id":"2014", "label":"2014"},
+        {"id":"2015", "label":"2015"},
+        {"id":"2016", "label":"2016"},
+        {"id":"2017", "label":"2017"},
+        {"id":"2018", "label":"2018"},
+        {"id":"2012", "label":"2012"},
+        {"id":"2011", "label":"2011"},
+        {"id":"2010", "label":"2010"},
+        {"id":"2009", "label":"2009"},
+        {"id":"2008", "label":"2008"},
+        {"id":"2007", "label":"2007"}
+      ]
+    },
+    "value": "",
+    "Order": 2
+  },
+  {
+    "id": 125,
+    "model": "brand",
+    "label": "Brand",
+    "details": {
+      "type": "input",
+      "placeholder" : "Brand",
+      "required": true
+    },
+    "value": "",
+    "Order": 3
+  },
+  {
+    "id": 126,
+    "model": "color",
+    "label": "Color",
+    "details": {
+      "type": "input",
+      "placeholder" : "Color",
+      "required": true
+    },
+    "value": "",
+    "Order": 4
+  }
+]
